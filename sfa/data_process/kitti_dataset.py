@@ -173,7 +173,7 @@ class KittiDataset(Dataset):
         maxZ = cnf.boundary['maxZ']
 
         num_objects = min(len(labels), self.max_objects)
-        hm_l, hm_w = self.hm_size
+        hm_l, hm_w = self.hm_size  #size of the heat map
 
         hm_main_center = np.zeros((self.num_classes, hm_l, hm_w), dtype=np.float32)
         cen_offset = np.zeros((self.max_objects, 2), dtype=np.float32)
